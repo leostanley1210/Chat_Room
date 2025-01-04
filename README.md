@@ -28,7 +28,7 @@ A real-time chatroom web application built using Java 17, Spring Boot, WebSocket
 
 1. **Clone the Repository**:
    ```sh
-   git clone https://github.com/Goldencat98/ChatRoom.git
+   git clone https://github.com/Sushmaa123/Chat_Room.git
    cd ChatRoom
    ```
 
@@ -39,7 +39,7 @@ A real-time chatroom web application built using Java 17, Spring Boot, WebSocket
 
 3. **Run the Application**:
    ```sh
-   mvn spring-boot:run
+   java -jar chatroom-0.0.1-SNAPSHOT.jar
    ```
 
 4. **Access the Application**:
@@ -52,13 +52,9 @@ A real-time chatroom web application built using Java 17, Spring Boot, WebSocket
 
 ## License
 
-This project is licensed under the **Goldencat Chatroom License**. You may use, modify, and distribute the software for personal, non-commercial use. Commercial use requires prior approval from the creator.
+This project is licensed under the **Devops License**. You may use, modify, and distribute the software for personal, non-commercial use. Commercial use requires prior approval from the creator.
 
 For more details, see the [LICENSE](./License.md) file.
-
-## Contact
-
-For permissions related to commercial use or any questions, please contact: Code With Goldencat (codingwithgoldencat@gmail.com)
 
 ## Contributions
 
