@@ -50,12 +50,6 @@ A real-time chatroom web application built using Java 17, Spring Boot, WebSocket
 - **Login**: Enter your desired username to join the chatroom.
 - **Chat**: Send messages to other users in real-time. You will be notified when new users join or leave the chat.
 
-## License
-
-This project is licensed under the **Devops License**. You may use, modify, and distribute the software for personal, non-commercial use. Commercial use requires prior approval from the creator.
-
-For more details, see the [LICENSE](./License.md) file.
-
 ## Contributions
 
 Contributions are welcome! Feel free to open an issue or submit a pull request to improve the project.
