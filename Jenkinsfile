@@ -2,8 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'maven'
-        jdk 'java-17'
-     }
+         }
 
     stages {
         stage('GIT SCM') {
