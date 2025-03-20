@@ -2,6 +2,7 @@ pipeline {
     agent {label 'windows-slave'}
     tools {
         maven 'maven'
+        java 'java-17'
      }
 
     stages {
