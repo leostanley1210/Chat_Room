@@ -6,7 +6,7 @@ pipeline {
      }
 
     stages {
-        stage('GIT SCM') {
+        stage('GIT CHECKOUT') {
             steps {
                 git 'https://github.com/leostanley1210/Chat_Room.git'
             }
