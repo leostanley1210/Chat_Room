@@ -2,11 +2,10 @@ pipeline {
     agent {label 'windows-slave'}
     tools {
         maven 'maven'
-        
-     }
+    }
 
     stages {
-        stage('GIT CHECKOUT') {
+        stage('GIT SCM') {
             steps {
                 git 'https://github.com/leostanley1210/Chat_Room.git'
             }
