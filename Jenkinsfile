@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'slave'}
     tools {
-        java 'java'
+        java 'openjdk-17'
         maven 'maven'
      }
 
