@@ -1,13 +1,13 @@
 pipeline {
-    agent {label 'slave'}
+    agent slave
     tools {
         maven 'maven'
-     }
+    }
 
     stages {
         stage('GIT SCM') {
-            steps {
-                git 'https://github.com/leostanley1210/Chat_Room.git'
+            steps{
+                git credentialsId: 'ssh', url: 'git@github.com:leostanley1210/sample_chat.git'
             }
         }
     
