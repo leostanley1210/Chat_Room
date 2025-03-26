@@ -1,30 +1,22 @@
 pipeline {
-    agent {
-        label 'slave'
-        }
 
-    tools {
-        maven 'maven'
-    }
+    agent { label 'slave' } 
 
     stages {
-        stage('GIT SCM') {
-            steps{
-                git credentialsId: 'ssh', url: 'git@github.com:leostanley1210/sample_chat.git'
+        stage('Checkout') {
+            steps {
+                git credentialsId: 'pipe-line', url: 'git@github.com:leostanley1210/Chat_Room.git', branch: 'master'
             }
         }
-    
-        stage ('compile') {
+        stage('compile') {
             steps {
-                sh 'mvn compile'
+                sh 'make compile'
             }
         }
-           
-        stage ('build') {
+        stage('build') {
             steps {
-                 sh 'mvn package'
-           }
-         }
+                sh 'make build'
+            }
+        }
     }
-
-}         
+}
