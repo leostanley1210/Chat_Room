@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'pipe-line', url: 'git@github.com:leostanley1210/Chat_Room.git', branch: 'master'
+                git credentialsId: 'leostanely1210', url: 'git@github.com:leostanley1210/Chat_Room.git', branch: 'master'
             }
         }
         stage('compile') {
