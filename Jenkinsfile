@@ -1,9 +1,6 @@
 pipeline {
-    {
         agent any
-    }
-
-    stages {
+stages {
         stage('Checkout') {
             steps {
                 git credentialsId: 'qqqqq', url: 'git@github.com:leostanley1210/Chat_Room.git', branch: 'master'
