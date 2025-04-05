@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'shh-connection', url: 'git@github.com:leostanley1210/Chat_Room.git', branch: 'master'
+                git credentialsId: 'shh-connection', url: 'git@github.com:leostanley1210/Chat_Room.git'
             }
         }
 
