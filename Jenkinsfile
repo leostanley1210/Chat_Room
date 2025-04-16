@@ -1,35 +1,36 @@
 pipeline {
-    agent any
-    stages {
-        stage('git Checkout') {
-            steps {
-                git 'https://github.com/leostanley1210/Chat_Room.git'
-            }
+   agent any
+    environment {
+     SCANNER_HOME = tool 'sonar-scanner'
+    }
+   stages {
+      stage('git checkout') {
+        steps {
+            git 'https://github.com/leostanley1210/Chat_Room.git'  
         }
-
-        stage('docker build') {
-            steps {
-                script {
-                sh 'docker build -t leostanely1210/chatroom .'
+      }
+      stage('code analysis') {
+        steps {
+            withSonarQubeEnv('sonar-server') {
+                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Chat_Room \
+               -Dsonar.java.binaries=. \
+               -Dsonar.projectKey=Chat_Room'''
+               }
+        }
+      }
+      stage('docker build') {
+        steps {
+            script {
+              sh 'docker build -t chat-room .' 
+            }
+      }
+    }
+   stage('docker container') {
+         steps {
+            script {
+               sh 'docker run -itd --name chat-room -p 8082:8080 chat-room'
               }
-           }
-        }
-
-        stage('docker push') {
-            steps {
-                script {
-                    withDockerRegistry(credentialsId: 'docker-cred') {
-                    sh 'docker push leostanely1210/chatroom'
-                    }
-                }
-            }
-        }
-       stage('docker container'){
-           steps {
-               script {
-                   sh 'docker run -itd --name chatroom-cont -p 8081:8080 leostanely1210/chatroom'
-                }
-            }
-        }
-     }
- }
+          }
+    }    
+ }       
+}    
