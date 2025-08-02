@@ -11,7 +11,7 @@ A real-time chatroom web application built using Java 17, Spring Boot, WebSocket
 - **Responsive Design**: Built with Bootstrap to ensure a consistent experience across devices.
 - **Social Media Integration**: Links to social profiles are provided in the chatroom header.
 
-## Tech Stack
+## Tech Stack sssss
 
 - **Backend**: Java 17, Spring Boot
 - **Frontend**: Thymeleaf, Bootstrap, Font Awesome
